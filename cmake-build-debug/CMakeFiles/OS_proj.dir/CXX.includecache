@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/micha/CLionProjects/OS_proj/CPU_info.h
+
+C:/Users/micha/CLionProjects/OS_proj/Opcodes.h
+
+C:/Users/micha/CLionProjects/OS_proj/Opfunction.cpp
+Opfunction.h
+C:/Users/micha/CLionProjects/OS_proj/Opfunction.h
+Opcodes.h
+C:/Users/micha/CLionProjects/OS_proj/Opcodes.h
+
+C:/Users/micha/CLionProjects/OS_proj/Opfunction.h
+
+C:/Users/micha/CLionProjects/OS_proj/Registers.h
+
+C:/Users/micha/CLionProjects/OS_proj/main.cpp
+stdio.h
+-
+malloc.h
+-
+Opcodes.h
+C:/Users/micha/CLionProjects/OS_proj/Opcodes.h
+Opfunction.h
+C:/Users/micha/CLionProjects/OS_proj/Opfunction.h
+Registers.h
+C:/Users/micha/CLionProjects/OS_proj/Registers.h
+CPU_info.h
+C:/Users/micha/CLionProjects/OS_proj/CPU_info.h
+
