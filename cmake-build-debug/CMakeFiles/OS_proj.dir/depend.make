@@ -4,6 +4,7 @@
 CMakeFiles/OS_proj.dir/Opfunction.cpp.obj: ../Opcodes.h
 CMakeFiles/OS_proj.dir/Opfunction.cpp.obj: ../Opfunction.cpp
 CMakeFiles/OS_proj.dir/Opfunction.cpp.obj: ../Opfunction.h
+CMakeFiles/OS_proj.dir/Opfunction.cpp.obj: ../Registers.h
 
 CMakeFiles/OS_proj.dir/main.cpp.obj: ../CPU_info.h
 CMakeFiles/OS_proj.dir/main.cpp.obj: ../Opcodes.h
