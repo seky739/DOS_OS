@@ -394,6 +394,7 @@ int jne(Registr *r, bit8 *pamet){
     {
         r->ip+=2;
         printf ("Instrukce JNE shoda, posun dal\n");
+        r->instrukcniPrefix=0;
     }
     else
     {
@@ -405,6 +406,10 @@ int jne(Registr *r, bit8 *pamet){
             printf ("Instrukce JNE skok o %d na %x\n", jmp, r->ip);
     }
     return(0);
+}
+int notImplemented(Registr *r, bit8 *pamet){
+    printf("Instrukce nebyla implementovana");
+    return (0);
 }
 
 char doplnek(char value)

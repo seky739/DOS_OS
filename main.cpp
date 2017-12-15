@@ -8,14 +8,14 @@
 
 int OpTable[21]={0xB8,0x8C,0x8E,0x33,0xBA,0xBE,0xBB,0xEB,0xFF,0x03,0x8A,0x43,0x42,0x49,0xB4,0x00,0xBF,0xC7,0x7B,0x83,0x75};
 
-
+int (*handle_fce[])(Registr*,bit8*)={addaddr,notImplemented,notImplemented,add,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,xor_instr,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,incedx,incebx,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,dececx,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,jne,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,jnp,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,cmp,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,moveA,notImplemented,moveC,notImplemented,moveE,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,moveah,notImplemented,notImplemented,notImplemented,moveEax,notImplemented,moveEdx,moveEbx,notImplemented,notImplemented,moveEsi,movedi,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,movec7,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,jmp,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,notImplemented,inc,};
 
 int main(int argc, char **argv) {
 
 
-    int (*handle_fce[])(Registr*,bit8*)= {moveEax, moveC, moveE, xor_instr,moveEdx,moveEsi,moveEbx,jmp,inc,add,moveA
-            ,incebx,incedx,dececx,moveah,addaddr,movedi,movec7,jnp,cmp,jne};
-
+    /*int (*handle_fce[])(Registr*,bit8*)= {moveEax, moveC, moveE, xor_instr,moveEdx,moveEsi,moveEbx,jmp,inc,add,moveA
+           ,incebx,incedx,dececx,moveah,addaddr,movedi,movec7,jnp,cmp,jne};
+*/
     bit8 *pamet;
     int i=HEADER_SIZE;
     char c;
@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
         {
             c = fgetc(f);
             pamet[i++] = (bit8) c;
-             printf("%x \n",c);
+            // printf("%x \n",c);
 
         }
        /* if(c==-1){
@@ -82,7 +82,7 @@ int main(int argc, char **argv) {
         }else{
 
             int opTableIndex=-1;
-            for (int j = 0; j < 21; ++j) {
+            /*for (int j = 0; j < 21; ++j) {
                 if (OpTable[j]==instrukce){
                     opTableIndex=j;
                     printf("volana FCE je :  %d \n",opTableIndex);
@@ -90,7 +90,7 @@ int main(int argc, char **argv) {
                     r.instrukcniPrefix=0;
                     break;
                 }
-            }
+            }*/
             if(instrukce==INT){
                 opTableIndex=80;
                 r.ip++;
@@ -113,12 +113,18 @@ int main(int argc, char **argv) {
                         break;
                 }
             }
+                  if (opTableIndex==-1){
+                        opTableIndex=200;
+                     // printf("volana FCE je :  %d \n",opTableIndex);
+                      retur=handle_fce[instrukce](&r, pamet);
+                      r.instrukcniPrefix=0;
+                  }
 
                 //printf("Definované přerušení %d (0x%x)\n", instr, instr);
 
-                if(opTableIndex==-1 && instrukce!=INT){
+                /*if(opTableIndex==-1 && instrukce!=INT){
                    r.ip++;
-                }
+                }*/
                 if(retur==-1){
                  printf("\n \nPri zpracovani doslo k chybe.\n \n");
                 exit(-10);

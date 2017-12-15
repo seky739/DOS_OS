@@ -30,6 +30,8 @@ int jnp(Registr*, bit8*);
 int cmp(Registr*, bit8*);
 int jne(Registr*, bit8*);
 
+int notImplemented(Registr *r, bit8 *pamet);
+
 char doplnek(char value);
 
 
