@@ -14,4 +14,18 @@
 #define STRING 0x24								// terminální znak výpisu řetězce (pro int 21h)
 
 
+
+void printReg(Registr *regs);
+register16 *getRMregister(bit8 position, bit8 val, Registr *regs);
+register16 *getRMsegment(bit8 position, bit8 val, Registr *regs);
+bit8 getRMmode(bit8 val);
+
+// obsluha přerušení
+
+int int_10(Registr *regs, bit8 *memory);
+int int_20(Registr *regs, bit8 *memory);
+int int_21(Registr *regs, bit8 *memory);
+
+void writeBuffer(bit8 *memory);
+
 #endif //OS_PROJ_CPU_INFO_H

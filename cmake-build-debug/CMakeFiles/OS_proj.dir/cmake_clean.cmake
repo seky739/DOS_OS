@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/OS_proj.dir/main.cpp.obj"
   "CMakeFiles/OS_proj.dir/Opfunction.cpp.obj"
+  "CMakeFiles/OS_proj.dir/CPU.cpp.obj"
   "OS_proj.pdb"
   "OS_proj.exe"
   "OS_proj.exe.manifest"

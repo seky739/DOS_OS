@@ -6,15 +6,31 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/micha/CLionProjects/OS_proj/CPU.cpp
+Opfunction.h
+C:/Users/micha/CLionProjects/OS_proj/Opfunction.h
+CPU_info.h
+C:/Users/micha/CLionProjects/OS_proj/CPU_info.h
+stdio.h
+-
+
 C:/Users/micha/CLionProjects/OS_proj/CPU_info.h
 
 C:/Users/micha/CLionProjects/OS_proj/Opcodes.h
 
 C:/Users/micha/CLionProjects/OS_proj/Opfunction.cpp
+stdio.h
+-
+cstdlib
+-
 Opfunction.h
 C:/Users/micha/CLionProjects/OS_proj/Opfunction.h
 Opcodes.h
 C:/Users/micha/CLionProjects/OS_proj/Opcodes.h
+CPU_info.h
+C:/Users/micha/CLionProjects/OS_proj/CPU_info.h
+Registers.h
+C:/Users/micha/CLionProjects/OS_proj/Registers.h
 
 C:/Users/micha/CLionProjects/OS_proj/Opfunction.h
 Registers.h

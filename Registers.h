@@ -10,7 +10,7 @@ typedef unsigned int  register16;
 typedef unsigned char bit8;
 
 typedef struct {
-    struct					// AX
+    union					// AX
     {
         register16 ax;
         register32 eax;
@@ -21,7 +21,7 @@ typedef struct {
         };
     };
 
-    struct					// BX
+    union					// BX
     {
         register16 bx;
         register32 ebx;
@@ -31,7 +31,7 @@ typedef struct {
             bit8 bh;
         };
     };
-    struct				// CX
+    union				// CX
     {
         register16 cx;
         register32 ecx;
@@ -42,7 +42,7 @@ typedef struct {
         };
     };
 
-    struct					// DX
+    union					// DX
     {
         register16 dx;
         register32 edx;
@@ -54,7 +54,7 @@ typedef struct {
     };
 
     register16 si;
-    register32 di;
+    register16 di;
 
     register16 cs;
     register16 ds;
@@ -67,6 +67,11 @@ typedef struct {
     register16 ip;
 
     bit8 flag;
+
+    bit8 instrukcniPrefix;
+    bit8 ESprefer;
+    bit8 porovnavani;
+
     //byte prefix;		// pseudoregistr pro uložení prefixu instrukce 0x66 nebo 0x67
     //byte espref;		// pseudoregistr pro uložení prefixu instrukce říkající, že má použít ES míst DS
     //byte equal;		// pseudoregistr pro uložení výsledku porovnání. Následně se bere v úvahu v podmíněném

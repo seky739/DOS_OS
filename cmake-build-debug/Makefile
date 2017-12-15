@@ -122,6 +122,33 @@ OS_proj/fast:
 	$(MAKE) -f CMakeFiles\OS_proj.dir\build.make CMakeFiles/OS_proj.dir/build
 .PHONY : OS_proj/fast
 
+CPU.obj: CPU.cpp.obj
+
+.PHONY : CPU.obj
+
+# target to build an object file
+CPU.cpp.obj:
+	$(MAKE) -f CMakeFiles\OS_proj.dir\build.make CMakeFiles/OS_proj.dir/CPU.cpp.obj
+.PHONY : CPU.cpp.obj
+
+CPU.i: CPU.cpp.i
+
+.PHONY : CPU.i
+
+# target to preprocess a source file
+CPU.cpp.i:
+	$(MAKE) -f CMakeFiles\OS_proj.dir\build.make CMakeFiles/OS_proj.dir/CPU.cpp.i
+.PHONY : CPU.cpp.i
+
+CPU.s: CPU.cpp.s
+
+.PHONY : CPU.s
+
+# target to generate assembly for a file
+CPU.cpp.s:
+	$(MAKE) -f CMakeFiles\OS_proj.dir\build.make CMakeFiles/OS_proj.dir/CPU.cpp.s
+.PHONY : CPU.cpp.s
+
 Opfunction.obj: Opfunction.cpp.obj
 
 .PHONY : Opfunction.obj
@@ -185,6 +212,9 @@ help:
 	@echo ... OS_proj
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... CPU.obj
+	@echo ... CPU.i
+	@echo ... CPU.s
 	@echo ... Opfunction.obj
 	@echo ... Opfunction.i
 	@echo ... Opfunction.s

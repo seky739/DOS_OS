@@ -7,23 +7,32 @@
 
 #include "Registers.h"
 
-int moveEax(Registr *r, bit8 *pamet);
-int moveC(Registr *r, bit8 *pamet);
-int moveE(Registr *r, bit8 *pamet);
-int xor_instr(Registr *r, bit8 *pamet);
-int moveEdx(Registr *r, bit8 *pamet);
-int moveEsi(Registr *r, bit8 *pamet);
-int moveEbx(Registr *r, bit8 *pamet);
-int jmp(Registr *r, bit8 *pamet);
-int inc(Registr *r, bit8 *pamet);
-int add(Registr *r, bit8 *pamet);
-int moveA(Registr *r, bit8 *pamet);
-int incebx(Registr *r, bit8 *pamet);
-int incedx(Registr *r, bit8 *pamet);
-int dececx(Registr *r, bit8 *pamet);
-int moveah(Registr *r, bit8 *pamet);
-int addaddr(Registr *r, bit8 *pamet);
-int movedi(Registr *r, bit8 *pamet);
-int movec7(Registr *r, bit8 *pamet);
+
+int moveEax(Registr* , bit8*);
+int moveC(Registr*, bit8*);
+int moveE(Registr* , bit8*);
+int xor_instr(Registr*, bit8*);
+int moveEdx(Registr*, bit8*);
+int moveEsi(Registr*, bit8*);
+int moveEbx(Registr*, bit8*);
+int jmp(Registr*, bit8*);
+int inc(Registr*, bit8*);
+int add(Registr*, bit8*);
+int moveA(Registr*, bit8*);
+int incebx(Registr*, bit8*);
+int incedx(Registr*, bit8*);
+int dececx(Registr*, bit8*);
+int moveah(Registr*, bit8*);
+int addaddr(Registr*, bit8*);
+int movedi(Registr*, bit8*);
+int movec7(Registr*, bit8*);
+int jnp(Registr*, bit8*);
+int cmp(Registr*, bit8*);
+int jne(Registr*, bit8*);
+
+char doplnek(char value);
+
+
+
 
 #endif //OS_PROJ_OPFUNCTION_H

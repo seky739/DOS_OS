@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/micha/CLionProjects/OS_proj/CPU.cpp" "C:/Users/micha/CLionProjects/OS_proj/cmake-build-debug/CMakeFiles/OS_proj.dir/CPU.cpp.obj"
   "C:/Users/micha/CLionProjects/OS_proj/Opfunction.cpp" "C:/Users/micha/CLionProjects/OS_proj/cmake-build-debug/CMakeFiles/OS_proj.dir/Opfunction.cpp.obj"
   "C:/Users/micha/CLionProjects/OS_proj/main.cpp" "C:/Users/micha/CLionProjects/OS_proj/cmake-build-debug/CMakeFiles/OS_proj.dir/main.cpp.obj"
   )

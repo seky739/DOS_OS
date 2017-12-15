@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/micha/CLionProjects/OS_proj/CPU.cpp">
+			<Option target="OS_proj"/>
+		</Unit>
 		<Unit filename="C:/Users/micha/CLionProjects/OS_proj/CPU_info.h">
 			<Option target="OS_proj"/>
 		</Unit>
